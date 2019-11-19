@@ -1,15 +1,14 @@
 # post_to_homeassistant
-
-Python script to post to Home Assistant REST API.  Useful for intergration other systems, for example Blue Iris.
-
-The requests module is required.  Install requests with pip:
-```pip install requests```
+This is a python script to post to the Home Assistant REST API using Long Lived Tokens.  This will allow you to control lights, switches and input_booleans using command line arguments.
 
 Usage example:
 `post_to_homeassistant.py input_boolean.front_door_camera_motion on`
 
+The requests module is required.  Install requests with pip:
+```pip install requests```
 
-See blueiris.yaml for an example to be installed in the packages/ directory of Home Assistant
+
+The goal of this repo is to intergrate Blue Iris into Home Assistant.  I've included an example Home Assistant package, see ```blueiris.yaml```
 
 Home Assistant configuration for Blue Iris intergration example:
 ```

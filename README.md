@@ -7,8 +7,9 @@ Usage example:
 The requests module is required.  Install requests with pip:
 ```pip install requests```
 
+You will need to edit the script and assign the URL to your Home Assistant instance, as well as the token.  You can create a token from your profile page in Home Assistant.  More information found here: [https://www.home-assistant.io/docs/authentication/](https://www.home-assistant.io/docs/authentication/)
 
-The goal of this repo is to intergrate Blue Iris into Home Assistant.  I've included an example Home Assistant package, see ```blueiris.yaml```
+The goal of this repo is to intergrate Blue Iris into Home Assistant.  I've included an example Home Assistant package, see ```blueiris.yaml```.  This script is open ended and could be used with any project which is able to execute a python script to trigger a state change.
 
 Home Assistant configuration for Blue Iris intergration example:
 ```

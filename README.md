@@ -1,15 +1,28 @@
 # post_to_homeassistant
 This is a python script to post to the Home Assistant REST API using Long Lived Tokens.  This will allow you to control lights, switches and input_booleans using command line arguments.
 
-Usage example:
+The goal of this repo is to intergrate Blue Iris into Home Assistant.  I've included an example Home Assistant package, see ```blueiris.yaml```.  This script is open ended and could be used with any project which is able to execute a python script to trigger a state change.
+
+
+## Two command line arguments are required
+`post_to_homeassistant.py <entity_id> <state>`
+
+## Usage example
 `post_to_homeassistant.py input_boolean.front_door_camera_motion on`
 
+
+## Requirements
 The requests module is required.  Install requests with pip:
 ```pip install requests```
 
-You will need to edit the script and assign the URL to your Home Assistant instance, as well as the token.  You can create a token from your profile page in Home Assistant.  More information found here: [https://www.home-assistant.io/docs/authentication/](https://www.home-assistant.io/docs/authentication/)
+## Configuration
+There are two variables which need to be configured
+* ha_url - The full url to your Home Assistant instance.  Example:  http://192.168.2.2:8123
+* token - The Long Lived Access Token to be used for the API calls
 
-The goal of this repo is to intergrate Blue Iris into Home Assistant.  I've included an example Home Assistant package, see ```blueiris.yaml```.  This script is open ended and could be used with any project which is able to execute a python script to trigger a state change.
+You will need to edit the script and assign the URL to your Home Assistant instance, as well as the token.  You can create a token from your profile page in Home Assistant.  
+More information can be found here: [https://www.home-assistant.io/docs/authentication/](https://www.home-assistant.io/docs/authentication/)
+
 
 Home Assistant configuration for Blue Iris intergration example:
 ```
